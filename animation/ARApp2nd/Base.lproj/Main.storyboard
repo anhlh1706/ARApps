@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="ARApp2nd" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U0K-SW-4ec">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="phf-5V-oEk">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </arscnView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aX1-eh-8Ov">
+                                <rect key="frame" x="40" y="802" width="334" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLF-ty-tFo">
+                                        <rect key="frame" x="0.0" y="0.0" width="111.5" height="50"/>
+                                        <state key="normal" image="Change"/>
+                                        <connections>
+                                            <action selector="change:" destination="BV1-FR-VrT" eventType="touchUpInside" id="44O-zF-9vN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vqt-Ei-FGS">
+                                        <rect key="frame" x="111.5" y="0.0" width="111" height="50"/>
+                                        <state key="normal" image="Plus"/>
+                                        <connections>
+                                            <action selector="plus:" destination="BV1-FR-VrT" eventType="touchUpInside" id="lQl-Ik-lSM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JVE-NQ-Etd">
+                                        <rect key="frame" x="222.5" y="0.0" width="111.5" height="50"/>
+                                        <state key="normal" image="Minus"/>
+                                        <connections>
+                                            <action selector="minus:" destination="BV1-FR-VrT" eventType="touchUpInside" id="WcC-N5-f57"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="JVE-NQ-Etd" firstAttribute="width" secondItem="Vqt-Ei-FGS" secondAttribute="width" id="ZIN-ok-k7B"/>
+                                    <constraint firstAttribute="height" constant="50" id="jSH-HO-xvP"/>
+                                    <constraint firstItem="JVE-NQ-Etd" firstAttribute="width" secondItem="KLF-ty-tFo" secondAttribute="width" id="yT3-IM-fMx"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="aX1-eh-8Ov" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" constant="40" id="6vM-RK-Dam"/>
+                            <constraint firstItem="phf-5V-oEk" firstAttribute="top" secondItem="fQZ-KI-GVf" secondAttribute="top" id="8K1-0E-hbN"/>
+                            <constraint firstItem="fQZ-KI-GVf" firstAttribute="bottom" secondItem="aX1-eh-8Ov" secondAttribute="bottom" constant="10" id="DBn-Ln-FXN"/>
+                            <constraint firstItem="phf-5V-oEk" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="LXL-ig-C1V"/>
+                            <constraint firstItem="fQZ-KI-GVf" firstAttribute="bottom" secondItem="phf-5V-oEk" secondAttribute="bottom" id="P5Y-Us-fpP"/>
+                            <constraint firstItem="fQZ-KI-GVf" firstAttribute="trailing" secondItem="aX1-eh-8Ov" secondAttribute="trailing" constant="40" id="eMQ-hP-LF2"/>
+                            <constraint firstItem="fQZ-KI-GVf" firstAttribute="trailing" secondItem="phf-5V-oEk" secondAttribute="trailing" id="lfd-st-RXg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="phf-5V-oEk" id="5qV-LM-Wd5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="61"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Change" width="50" height="50"/>
+        <image name="Minus" width="50" height="50"/>
+        <image name="Plus" width="50" height="50"/>
+    </resources>
+</document>

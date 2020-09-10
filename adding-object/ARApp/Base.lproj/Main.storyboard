@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17124"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="ARApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U0K-SW-4ec">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cpi-7s-Lzb">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mka-IG-Q6E">
+                                <rect key="frame" x="182" y="822" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="3r9-1M-mMu"/>
+                                    <constraint firstAttribute="height" constant="50" id="9BR-Wa-Zaz"/>
+                                </constraints>
+                                <state key="normal" image="Plus"/>
+                                <connections>
+                                    <action selector="addAction:" destination="BV1-FR-VrT" eventType="touchUpInside" id="GsI-RF-dSd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="cpi-7s-Lzb" secondAttribute="bottom" id="41s-i2-D1H"/>
+                            <constraint firstItem="Mka-IG-Q6E" firstAttribute="centerX" secondItem="fQZ-KI-GVf" secondAttribute="centerX" id="5op-wI-get"/>
+                            <constraint firstItem="Mka-IG-Q6E" firstAttribute="bottom" secondItem="fQZ-KI-GVf" secondAttribute="bottom" constant="10" id="68V-gs-Pa6"/>
+                            <constraint firstItem="cpi-7s-Lzb" firstAttribute="top" secondItem="U0K-SW-4ec" secondAttribute="top" id="BbU-WI-zaZ"/>
+                            <constraint firstItem="fQZ-KI-GVf" firstAttribute="trailing" secondItem="cpi-7s-Lzb" secondAttribute="trailing" id="Yye-Pd-FNz"/>
+                            <constraint firstItem="cpi-7s-Lzb" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="z9w-mC-dnX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="cpi-7s-Lzb" id="r4l-dq-848"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="49.553571428571423"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Plus" width="50" height="50"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
